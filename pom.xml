@@ -10,16 +10,16 @@
 
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
-    <artifactId>tablesorter</artifactId>
-    <version>2.0.5-SNAPSHOT</version>
-    <name>tablesorter</name>
+    <artifactId>christianbach-tablesorter</artifactId>
+    <version>07e0918-SNAPSHOT</version>
+    <name>christianbach-tablesorter</name>
     <description>WebJar for tablesorter</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.url>https://github.com/christianbach/tablesorter/archive/master.zip</upstream.url>
-        <tablesorter.version>master</tablesorter.version>
+        <version.unsnapshot>07e0918254df3c2057d6d8e4653a0769f1881412</version.unsnapshot>
+        <upstream.url>https://github.com/christianbach/tablesorter/archive/${version.unsnapshot}.zip</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
 
     </properties>
@@ -41,9 +41,9 @@
     </licenses>
 
     <scm>
-        <url>http://github.com/webjars/tablesorter</url>
-        <connection>scm:git:https://github.com/webjars/tablesorter.git</connection>
-        <developerConnection>scm:git:https://github.com/webjars/tablesorter.git</developerConnection>
+        <url>http://github.com/webjars/christianbach-tablesorter</url>
+        <connection>scm:git:https://github.com/webjars/christianbach-tablesorter.git</connection>
+        <developerConnection>scm:git:https://github.com/webjars/christianbach-tablesorter.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
@@ -81,7 +81,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
                                 <echo message="moving resources"/>
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${tablesorter.version}"/>
+                                    <fileset dir="${project.build.directory}/tablesorter-${version.unsnapshot}"/>
                                 </move>
                             </target>
                         </configuration>
